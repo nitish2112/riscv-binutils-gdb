@@ -1124,6 +1124,28 @@ riscv_unwind_sp (struct gdbarch *gdbarch, struct frame_info *next_frame)
   return frame_unwind_register_unsigned (next_frame, RISCV_SP_REGNUM);
 }
 
+/* Implement the "init_reg" dwarf2_frame_ops method.  */
+
+static void
+riscv_dwarf2_frame_init_reg (struct gdbarch *gdbarch, int regnum,
+                               struct dwarf2_frame_state_reg *reg,
+                               struct frame_info *this_frame)
+{
+  switch (regnum)
+    {
+    case RISCV_ZERO_REGNUM:
+      reg->how = DWARF2_FRAME_REG_SAME_VALUE;
+      break;
+    case RISCV_PC_REGNUM:
+      reg->how = DWARF2_FRAME_REG_SAVED_REG;
+      reg->loc.reg = RISCV_RA_REGNUM;
+      break;
+    case RISCV_SP_REGNUM:
+      reg->how = DWARF2_FRAME_REG_CFA;
+      break;
+    }
+}
+
 /* Implement the dummy_id gdbarch method.  */
 
 static struct frame_id
@@ -1291,6 +1313,7 @@ riscv_gdbarch_init (struct gdbarch_info info,
 
   /* Frame unwinders.  Use DWARF debug info if available, otherwise use our own
      unwinder.  */
+  dwarf2_frame_set_init_reg (gdbarch, riscv_dwarf2_frame_init_reg);
   dwarf2_append_unwinders (gdbarch);
   frame_unwind_append_unwinder (gdbarch, &riscv_frame_unwind);
 
