@@ -43,6 +43,12 @@
 #define MASK_BEQ  0x707f
 #define MATCH_BNE 0x1063
 #define MASK_BNE  0x707f
+// nitish: Add support for for_u && for_r
+#define MATCH_FOR_U 0x2063
+#define MASK_FOR_U  0x707f
+#define MATCH_FOR_R 0x3063
+#define MASK_FOR_R  0x707f
+
 #define MATCH_BLT 0x4063
 #define MASK_BLT  0x707f
 #define MATCH_BGE 0x5063

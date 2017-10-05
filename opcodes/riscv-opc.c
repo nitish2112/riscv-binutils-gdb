@@ -188,6 +188,10 @@ const struct riscv_opcode riscv_opcodes[] =
 {"bnez",      "C",   "Cs,Cp",  MATCH_C_BNEZ, MASK_C_BNEZ, match_opcode, INSN_ALIAS },
 {"bnez",      "I",   "s,p",  MATCH_BNE, MASK_BNE | MASK_RS2, match_opcode, INSN_ALIAS },
 {"bne",       "I",   "s,t,p",  MATCH_BNE, MASK_BNE, match_opcode, 0 },
+// nitish: add support for for_r and for_u
+{"for_u",     "I",   "s,t,p",  MATCH_FOR_U, MASK_FOR_U, match_opcode, 0 },
+{"for_r",     "I",   "s,t,p",  MATCH_FOR_R, MASK_FOR_R, match_opcode, 0 },
+
 {"addi",      "C",   "Ct,Cc,CK", MATCH_C_ADDI4SPN, MASK_C_ADDI4SPN, match_opcode, INSN_ALIAS },
 {"addi",      "C",   "d,CU,Cj",  MATCH_C_ADDI, MASK_C_ADDI, match_rd_nonzero, INSN_ALIAS },
 {"addi",      "C",   "Cc,Cc,CL", MATCH_C_ADDI16SP, MASK_C_ADDI16SP, match_opcode, INSN_ALIAS },
