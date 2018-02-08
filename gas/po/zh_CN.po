@@ -6042,7 +6042,7 @@ msgstr ""
 #: config/tc-nios2.c:2611 config/tc-nios2.c:2625 config/tc-nios2.c:2640
 #: config/tc-nios2.c:2654
 #, fuzzy, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tzh: internal error: can't hash `%s': %s\n"
 msgstr "%P：内部错误：于 %s 行 %d 放弃\n"
 
 #. Probably a memory allocation problem?  Give up now.

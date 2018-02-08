@@ -191,6 +191,10 @@ const struct riscv_opcode riscv_opcodes[] =
 // nitish: add support for for_r and for_u
 {"for_u",     "I",   "s,t,p",  MATCH_FOR_U, MASK_FOR_U, match_opcode, 0 },
 {"for_r",     "I",   "s,t,p",  MATCH_FOR_R, MASK_FOR_R, match_opcode, 0 },
+{"for_f",     "I",   "s,t,p",  MATCH_FOR_F, MASK_FOR_F, match_opcode, 0 },
+// nitish: pushpop and push
+{"pushpop",   "I",   "d,s,t",   MATCH_PUSHPOP, MASK_PUSHPOP, match_opcode, 0 },
+{"push",      "I",   "d,s,t",   MATCH_PUSH, MASK_PUSH, match_opcode, 0 },
 
 {"addi",      "C",   "Ct,Cc,CK", MATCH_C_ADDI4SPN, MASK_C_ADDI4SPN, match_opcode, INSN_ALIAS },
 {"addi",      "C",   "d,CU,Cj",  MATCH_C_ADDI, MASK_C_ADDI, match_rd_nonzero, INSN_ALIAS },

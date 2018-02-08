@@ -5624,7 +5624,7 @@ msgstr ""
 
 #: config/tc-i860.c:227 config/tc-mips.c:1765
 #, fuzzy, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "trw: internal error: can't hash `%s': %s\n"
 msgstr "By'imbere Ikosa ku Umurongo"
 
 #: config/tc-i860.c:247

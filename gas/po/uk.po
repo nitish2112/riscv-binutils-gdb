@@ -6180,7 +6180,7 @@ msgstr "не вистачає .endfunc для попереднього .proc"
 #: config/tc-nios2.c:3626 config/tc-nios2.c:3640 config/tc-nios2.c:3655
 #: config/tc-pru.c:1564 config/tc-pru.c:1578 config/tc-riscv.c:611
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tuk: internal error: can't hash `%s': %s\n"
 msgstr "Внутрішня помилка: не вдалося створити хеш «%s»: %s\n"
 
 #. Probably a memory allocation problem?  Give up now.

@@ -4900,7 +4900,7 @@ msgstr ".endfunc hilang untuk .proc sebelumnya"
 
 #: config/tc-dlx.c:291 config/tc-i860.c:227 config/tc-mips.c:2321
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tid: internal error: can't hash `%s': %s\n"
 msgstr "internal error: tidak dapat hash `%s': %s\n"
 
 #. Probably a memory allocation problem?  Give up now.

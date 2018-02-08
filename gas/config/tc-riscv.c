@@ -419,7 +419,7 @@ hash_reg_name (enum reg_class class, const char *name, unsigned n)
   const char *retval = hash_insert (reg_names_hash, name, hash);
 
   if (retval != NULL)
-    as_fatal (_("internal error: can't hash `%s': %s"), name, retval);
+    as_fatal (_("t1: internal error: can't hash `%s': %s"), name, retval);
 }
 
 static void
@@ -618,8 +618,8 @@ md_begin (void)
 
       if (hash_error)
 	{
-	  fprintf (stderr, _("internal error: can't hash `%s': %s\n"),
-		   riscv_opcodes[i].name, hash_error);
+	  fprintf (stderr, _("t2: internal error: can't hash `%s' (name) `%s' (subset) `%x' (match) `%x' (mask): %s at location: %d (i)\n"),
+		   riscv_opcodes[i].name, riscv_opcodes[i].subset, riscv_opcodes[i].match, riscv_opcodes[i].mask, hash_error, i);
 	  /* Probably a memory allocation problem?  Give up now.  */
 	  as_fatal (_("Broken assembler.  No assembly attempted."));
 	}

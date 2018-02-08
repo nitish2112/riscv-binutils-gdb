@@ -6191,7 +6191,7 @@ msgstr ".endfunc manquant pour la déclaration .proc précédente"
 #: config/tc-nios2.c:3626 config/tc-nios2.c:3640 config/tc-nios2.c:3655
 #: config/tc-pru.c:1564 config/tc-pru.c:1578 config/tc-riscv.c:611
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tfr: internal error: can't hash `%s': %s\n"
 msgstr "erreur interne: ne peut adresser par hachage « %s »: %s\n"
 
 #. Probably a memory allocation problem?  Give up now.
@@ -14635,7 +14635,7 @@ msgstr "L'étiquette « %s » correspond à un nom de registre du processeur"
 
 #: config/tc-riscv.c:412
 #, c-format
-msgid "internal error: can't hash `%s': %s"
+msgid "tfr: internal error: can't hash `%s': %s"
 msgstr "erreur interne: ne peut adresser par hachage « %s »: %s"
 
 #: config/tc-riscv.c:493

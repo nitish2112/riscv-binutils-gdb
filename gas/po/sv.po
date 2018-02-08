@@ -5772,7 +5772,7 @@ msgstr ".endfunc saknas för föregående .proc"
 #: config/tc-dlx.c:295 config/tc-i860.c:226 config/tc-mips.c:3483
 #: config/tc-nios2.c:2419 config/tc-nios2.c:2433 config/tc-nios2.c:2448
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tsv: internal error: can't hash `%s': %s\n"
 msgstr "internt fel: kan inte hasha ”%s”: %s\n"
 
 #. Probably a memory allocation problem?  Give up now.

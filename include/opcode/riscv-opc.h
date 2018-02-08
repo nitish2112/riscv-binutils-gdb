@@ -43,11 +43,13 @@
 #define MASK_BEQ  0x707f
 #define MATCH_BNE 0x1063
 #define MASK_BNE  0x707f
-// nitish: Add support for for_u && for_r
+// nitish: Add support for for_u && for_r && for_f
 #define MATCH_FOR_U 0x2063
 #define MASK_FOR_U  0x707f
 #define MATCH_FOR_R 0x3063
 #define MASK_FOR_R  0x707f
+#define MATCH_FOR_F 0x5b
+#define MASK_FOR_F  0x707f
 
 #define MATCH_BLT 0x4063
 #define MASK_BLT  0x707f
@@ -103,6 +105,11 @@
 #define MASK_OR  0xfe00707f
 #define MATCH_AND 0x7033
 #define MASK_AND  0xfe00707f
+// nitish: add support for pushpop
+#define MATCH_PUSHPOP 0x200006b
+#define MASK_PUSHPOP  0xfe00707f
+#define MATCH_PUSH 0x200106b
+#define MASK_PUSH  0xfe00707f
 #define MATCH_ADDIW 0x1b
 #define MASK_ADDIW  0x707f
 #define MATCH_SLLIW 0x101b

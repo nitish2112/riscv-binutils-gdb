@@ -2547,7 +2547,7 @@ msgstr ""
 
 #: config/tc-arc.c:781
 #, c-format
-msgid "internal error: can't hash opcode '%s': %s"
+msgid "tgas: internal error: can't hash opcode '%s': %s"
 msgstr ""
 
 #: config/tc-arc.c:789 config/tc-arc.c:2522 config/tc-arc.c:2540
@@ -6113,7 +6113,7 @@ msgstr ""
 #: config/tc-nios2.c:3626 config/tc-nios2.c:3640 config/tc-nios2.c:3655
 #: config/tc-pru.c:1564 config/tc-pru.c:1578 config/tc-riscv.c:611
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tgas: internal error: can't hash `%s': %s\n"
 msgstr ""
 
 #. Probably a memory allocation problem?  Give up now.
@@ -14291,7 +14291,7 @@ msgstr ""
 
 #: config/tc-riscv.c:412
 #, c-format
-msgid "internal error: can't hash `%s': %s"
+msgid "tgas: internal error: can't hash `%s': %s"
 msgstr ""
 
 #: config/tc-riscv.c:493

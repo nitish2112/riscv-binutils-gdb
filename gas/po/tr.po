@@ -5248,7 +5248,7 @@ msgstr "Bilinmeyen geçici sanal yazmaç"
 
 #: config/tc-i860.c:229 config/tc-mips.c:1149
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "ttr: internal error: can't hash `%s': %s\n"
 msgstr "İç hata: `%s' hash'lenemedi: %s\n"
 
 #: config/tc-i860.c:249

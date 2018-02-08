@@ -4739,7 +4739,7 @@ msgstr ""
 
 #: config/tc-dlx.c:291 config/tc-i860.c:227 config/tc-mips.c:1927
 #, c-format
-msgid "internal error: can't hash `%s': %s\n"
+msgid "tja: internal error: can't hash `%s': %s\n"
 msgstr ""
 
 #. Probably a memory allocation problem?  Give up now.
