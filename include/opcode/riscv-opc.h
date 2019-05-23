@@ -110,6 +110,15 @@
 #define MASK_PUSHPOP  0xfe00707f
 #define MATCH_PUSH 0x200106b
 #define MASK_PUSH  0xfe00707f
+// nitish: add support for statson and statsoff
+#define MATCH_STATSON 0x200206b
+#define MASK_STATSON  0xfe00707f
+#define MATCH_STATSOFF 0x200306b
+#define MASK_STATSOFF  0xfe00707f
+// nitish: add support for spad conf
+#define MATCH_MTX 0x200406b
+#define MASK_MTX  0xfe00707f
+
 #define MATCH_ADDIW 0x1b
 #define MASK_ADDIW  0x707f
 #define MATCH_SLLIW 0x101b
@@ -150,6 +159,8 @@
 #define MASK_SW  0x707f
 #define MATCH_SD 0x3023
 #define MASK_SD  0x707f
+#define MATCH_SW_NC 0x4023
+#define MASK_SW_NC  0x707f
 #define MATCH_FENCE 0xf
 #define MASK_FENCE  0x707f
 #define MATCH_FENCE_I 0x100f

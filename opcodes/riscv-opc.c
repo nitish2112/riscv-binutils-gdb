@@ -195,6 +195,13 @@ const struct riscv_opcode riscv_opcodes[] =
 // nitish: pushpop and push
 {"pushpop",   "I",   "d,s,t",   MATCH_PUSHPOP, MASK_PUSHPOP, match_opcode, 0 },
 {"push",      "I",   "d,s,t",   MATCH_PUSH, MASK_PUSH, match_opcode, 0 },
+// nitish: statson and statsoff
+{"statson",   "I",   "d,s,t",   MATCH_STATSON, MASK_STATSON, match_opcode, 0 },
+{"statsoff",  "I",   "d,s,t",   MATCH_STATSOFF, MASK_STATSOFF, match_opcode, 0 },
+// nitish: spadconf
+//{"spadconf",  "I",   "d,s,t",   MATCH_SPADCONF, MASK_SPADCONF, match_opcode, 0 },
+// nitish: mtx
+{"mtx",  "I",   "d,s,t",   MATCH_MTX, MASK_MTX, match_opcode, 0 },
 
 {"addi",      "C",   "Ct,Cc,CK", MATCH_C_ADDI4SPN, MASK_C_ADDI4SPN, match_opcode, INSN_ALIAS },
 {"addi",      "C",   "d,CU,Cj",  MATCH_C_ADDI, MASK_C_ADDI, match_rd_nonzero, INSN_ALIAS },
@@ -269,6 +276,9 @@ const struct riscv_opcode riscv_opcodes[] =
 {"sw",        "C",   "Ct,Ck(Cs)",  MATCH_C_SW, MASK_C_SW, match_opcode, INSN_ALIAS },
 {"sw",        "I",   "t,q(s)",  MATCH_SW, MASK_SW, match_opcode, 0 },
 {"sw",        "I",   "t,A,s",  0, (int) M_SW, match_never, INSN_MACRO },
+// nitish: added support for sw_nc
+{"sw_nc",     "I",   "t,q(s)",  MATCH_SW_NC, MASK_SW_NC, match_opcode, 0 },
+
 {"fence",     "I",   "",  MATCH_FENCE | MASK_PRED | MASK_SUCC, MASK_FENCE | MASK_RD | MASK_RS1 | MASK_IMM, match_opcode, INSN_ALIAS },
 {"fence",     "I",   "P,Q",  MATCH_FENCE, MASK_FENCE | MASK_RD | MASK_RS1 | (MASK_IMM & ~MASK_PRED & ~MASK_SUCC), match_opcode, 0 },
 {"fence.i",   "I",   "",  MATCH_FENCE_I, MASK_FENCE | MASK_RD | MASK_RS1 | MASK_IMM, match_opcode, 0 },
